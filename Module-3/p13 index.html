@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox vs Grid</title>
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background: #252525;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.header h1 {
+    color: gold;
+}
+
+.header nav {
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.layout {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    padding: 25px;
+}
+
+.sidebar, .content {
+    background: #252525;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.sidebar p {
+    margin-top: 15px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.projects article {
+    background: #444;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #252525;
+}
+
+@media (max-width: 700px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+        </nav>
+    </header>
+
+    <main class="layout">
+
+        <aside class="sidebar">
+            <h2>My Skills</h2>
+            <p>Java</p>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>Python</p>
+        </aside>
+
+        <section class="content">
+            <h2>Welcome to My Portfolio</h2>
+            <p>I am learning how to use Flexbox and CSS Grid
+               together to create responsive layouts.</p>
+
+            <div class="projects">
+                <article>Portfolio Website</article>
+                <article>Restaurant Website</article>
+                <article>AI Project</article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Divyansh Raturi</p>
+    </footer>
+
+</body>
+</html>

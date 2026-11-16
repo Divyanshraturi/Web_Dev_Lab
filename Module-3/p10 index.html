@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Flexbox</title>
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 25px 5%;
+    background: #222;
+}
+
+.header h1 {
+    color: gold;
+}
+
+.header nav {
+    display: flex;
+    gap: 25px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    padding: 10px 20px;
+    background: gold;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 25px 5%;
+    background: #222;
+}
+
+.footer div {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .header, .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Divyansh Raturi</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Skills</a>
+            <a href="#">Projects</a>
+        </nav>
+        <button>Contact Me</button>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome to My Portfolio</h2>
+            <p>Building The Future.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Divyansh Raturi</p>
+        <div>
+            <a href="https://github.com/Divyanshraturi">GitHub</a>
+            <a href="https://www.linkedin.com/in/divyansh-raturi-a348a3427?utm_source=share_via&utm_content=profile&utm_medium=member_android">LinkedIn</a>
+        </div>
+    </footer>
+
+</body>
+</html>

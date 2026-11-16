@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Grid</title>
+    <style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: gold;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project {
+    background: #252525;
+    padding: 30px;
+    border-radius: 12px;
+    min-height: 180px;
+}
+
+.featured {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: #383020;
+}
+
+.project h2 {
+    color: gold;
+}
+
+@media (max-width: 800px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Projects</h1>
+        <p>Things I have built and explored.</p>
+    </header>
+
+    <main class="project-grid">
+
+        <article class="project featured">
+            <h2>Personal Portfolio</h2>
+            <p>A personal website built using HTML and CSS.</p>
+        </article>
+
+        <article class="project">
+            <h2>Restaurant Website</h2>
+            <p>A modern restaurant menu website.</p>
+        </article>
+
+        <article class="project">
+            <h2>AI Research</h2>
+            <p>Exploring artificial intelligence.</p>
+        </article>
+
+        <article class="project">
+            <h2>Java DSA</h2>
+            <p>Learning programming and problem solving.</p>
+        </article>
+
+        <article class="project">
+            <h2>Web Development</h2>
+            <p>Building responsive web interfaces.</p>
+        </article>
+
+    </main>
+
+</body>
+</html>
